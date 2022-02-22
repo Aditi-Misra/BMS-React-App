@@ -13,7 +13,7 @@ function SingleMovieFetch() {
     const [ Singledata , setSingleData] = useState([]);
     useEffect(async ()=>{
      try {
-        const response = await axios.get(`http://localhost:5000/movies/${movid}`);
+        const response = await axios.get(`https://backend-bms-newserver1.herokuapp.com/movies/${movid}`);
         console.log(response.data);
         setSingleData([response.data]);//this data is coming from backend
       } catch (error) {
